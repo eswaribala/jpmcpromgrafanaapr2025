@@ -53,7 +53,19 @@ helm list -n prometheus
 Step5:
 
 kubectl get pods -n prometheus
+
+#Bash script
+#install git bash
+#go to prometheus setup
+chmod 777 port-forward.sh
+#run the file
+./port-forward.sh
+
+
 Step6:
+
+
+
 
 Access Prometheus dashboard
 kubectl port-forward -n prometheus svc/prometheus-server 9090:80
