@@ -1,4 +1,4 @@
-Download all the yaml files(deployment-v17.yaml,postgres-deployment.yaml,postgres-pv.yaml) and store in prometehus training folder
+Download all the yaml files(deployment.yaml,postgres-deployment.yaml,postgres-pv.yaml) and store in prometehus training folder
 
 open cmd with admin privileges
 
