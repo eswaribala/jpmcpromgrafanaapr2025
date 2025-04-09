@@ -20,6 +20,7 @@ A duration to cover the length of that range goes at the end of the vector. For 
 
 node_scrape_collector_duration_seconds{job="node"}[2m]
 http_requests_total offset 2d
+#data you have collected and want to analyze over the period time in terms of percentage of change
 rate(http_requests_total[1h] offset 2d)
 rate(node_cpu_seconds_total[5m]) – CPU usage rate over 5 minutes.
 rate(http_requests_total[1m]) – HTTP request rate.
