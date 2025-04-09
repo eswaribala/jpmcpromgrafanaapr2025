@@ -183,6 +183,8 @@ count(node_network_receive_bytes_total > 0) – Active network interfaces.
 ============================================================================================
 And
 jvm_memory_max_bytes {id="Eden Space"} > 1000000 and jvm_memory_used_bytes {id="Eden Space"} >100000
+============================================================================================
+changes(up[6h])--History of up state
 
 node_disk_read_bytes_total {job="node_exporter"} >10000 and node_disk_read_time_seconds_total {job="node_exporter"} >0.1
 
