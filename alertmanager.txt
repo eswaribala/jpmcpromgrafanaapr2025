@@ -1,5 +1,8 @@
-
-config:
+alertmanager:
+  ## If false, alertmanager will not be installed
+  ##
+  enabled: true
+  config:
    global:
      resolve_timeout: 5m
    route:
@@ -24,6 +27,13 @@ config:
           group_wait: 1m
           group_interval: 10m
           repeat_interval: 1h
+        # Custom route for alerts from specific namespaces
+        - match:
+            severity: 'warning'
+          receiver: 'pager-duty-notifications'
+          group_wait: 1m
+          group_interval: 10m
+          repeat_interval: 1h
 
    receivers:
       - name: 'email-alerts'
@@ -40,7 +50,7 @@ config:
       - name: 'slack-notifications'
         slack_configs:
             - api_url: ''
-              channel: ''
+              channel: '#promalertmar2025'
               send_resolved: true
               title: "{{ .CommonLabels.alertname }} - {{ .Status }}"
               text: |
@@ -50,3 +60,7 @@ config:
                  *Severity:* {{ .Labels.severity }}
                  *Source:* {{ .GeneratorURL }}
                {{ end }}  
+      - name: 'pager-duty-notifications'
+        pagerduty_configs:
+        - service_key: ''  
+
