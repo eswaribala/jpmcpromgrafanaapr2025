@@ -7,3 +7,8 @@ kubectl get pods
 kubectl apply -f service.yaml
 kubectl get svc
 kubectl port-forward svc/nodejs-service 4000:80
+
+#go to postman
+#select post method
+#url
+http://localhost:4000/webhook
