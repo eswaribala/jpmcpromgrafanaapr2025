@@ -7,6 +7,9 @@ kubectl get pods
 kubectl apply -f service.yaml
 kubectl get svc
 kubectl port-forward svc/nodejs-service 4000:80
+#if service is pending
+kubectl expose deployment --port 4000 nodejs-deployment --type=LoadBalancer --name=nodejsservicev1
+
 
 #go to postman
 #select post method
