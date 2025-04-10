@@ -1,0 +1,9 @@
+#go to projects branch
+#download zip file from code button
+#extract zip file
+#go to webhook folder
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl apply -f service.yaml
+kubectl get svc
+kubectl port-forward svc/nodejs-service 4000:80
