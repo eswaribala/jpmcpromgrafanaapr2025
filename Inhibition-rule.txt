@@ -3,7 +3,7 @@
            expr: node_memory_MemAvailable_bytes{job="node_exporter"} / node_memory_MemTotal_bytes{job="node_exporter"} * 100 >50
            for: 2m
            labels:
-             severity: critical
+             severity: page
              inhibit: "true"
            annotations:
              summary: "Low memory available on {{ $labels.instance }}"
