@@ -19,7 +19,7 @@ kubectl apply -f deployment-v17.yaml
 kubectl get svc
 
 #do port forward
-kubectl port-forward svc/customerservice 7076:7076
+kubectl port-forward svc/customerservice 7074:7074
 
 or
 
