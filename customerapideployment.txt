@@ -7,7 +7,7 @@ kubectl apply -f postgres-pv.yaml
 kubectl apply -f postgres-deployment.yaml
 
 #application needs db to be created
-kubectl exec -it <pod name> -- psql -U postgres
+kubectl exec -it <postgres pod name> -- psql -U postgres
 will see hash prompt
 # create database customerdb;
 # quit
